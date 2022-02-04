@@ -8,8 +8,6 @@ public class TestExample {
 
     @Test
     void this_is_an_example() {
-
         assertThat(true ).isEqualTo(true);
-        assertThat(false ).isEqualTo(false);
     }
 }
