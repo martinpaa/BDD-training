@@ -1,9 +1,9 @@
 package com.codurance.serviceAccount;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class DateService {
-    public Date getDate() {
-        return new Date();
+    public LocalDate getDate() {
+        return LocalDate.now();
     }
 }

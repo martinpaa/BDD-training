@@ -10,8 +10,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.mockito.Mockito.verify;
@@ -22,7 +22,7 @@ class ServiceAccountShould {
 
     private  static final int AMOUNT = 1000;
 
-    private static final Date NOW = new Date();
+    private static final LocalDate NOW = LocalDate.now();
 
     private ServiceAccount serviceAccount;
 
