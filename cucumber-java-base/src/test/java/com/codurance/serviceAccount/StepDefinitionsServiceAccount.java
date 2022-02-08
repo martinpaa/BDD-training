@@ -14,11 +14,17 @@ public class StepDefinitionsServiceAccount {
     private ServiceAccount serviceAccount;
 
     private TransactionRepository transactionRepository;
+    private DateService dateService;
+    private PrinterService printerService;
+
 
     @Before
     public void init(){
+        dateService = new DateService();
         transactionRepository = new InMemoryTransactionRepository();
-        serviceAccount = new ServiceAccount(transactionRepository);
+        printerService = new PrinterService();
+        serviceAccount = new ServiceAccount(transactionRepository, dateService, printerService);
+
     }
 
     @Given("a client makes a deposit of {int} on {string}")
